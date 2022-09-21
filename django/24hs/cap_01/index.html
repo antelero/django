@@ -41,28 +41,46 @@
                 height: 50px;
                 position: relative;
             }
-
             ul{
                 position: absolute;
                 text-align: center;
-
             }
 
             li{
                 display: inline;
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
-
             }
 
             a{
                 color: white;
                 font-weight: bold;
-
             }
             a:hover{
                 color: black;
             }
-                
+            
+            #homePageDropdownMenu{
+                background-color: beige;
+                border: 15px solid white;
+                margin-top: 50px;
+                width: 50%;
+                height: 300px;
+                margin-left: auto;
+                margin-right: auto;
+                position: relative;
+            }
+
+            #dropDown{
+                position: absolute;
+                top: 40%;
+                left: 25%;
+                width: 500px;
+                padding: 20px;
+                font-size: 24px;
+            }
+            .optionVal{
+                font-size: 24px;
+            }
         </style>
     </head>
     <body>
@@ -84,7 +102,18 @@
                     <a href="help.html">Ayuda</a>
                 </li>
             </ul>
+         </div>
+        <div id="homePageDropdownMenu">
+            <label for="dropDown"></label>
+            <select id="dropDown" onchange="window.location.href= this.value">
+                <option selected disabled hidden value = ''></option>
+                <option class = "optionVal"
+                    value="aboutUs.html"> About Us</option>
+                <option class = "optionVal"
+                    value="createNewProfile.html"> Create a New Profile</option>
+                <option class = "optionVal"
+                    value="contactUsPage.html"> Contact Us</option>
+            </select>
         </div>
-        
     </body>
 </html>
